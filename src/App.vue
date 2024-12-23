@@ -1,9 +1,15 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <nav class="navbar">
+    <h1 class="main-title">Business FullStack</h1>
+    <h1 class="seperator">|</h1>
+    <router-link class="route" to="/">Home</router-link>
+    <router-link class="route" to="/departments">Department</router-link>
+    <router-link class="route" :to="{ name: 'employees' }"
+      >Employee</router-link
+    >
   </nav>
-  <router-view/>
+
+  <router-view />
 </template>
 
 <style>
@@ -11,20 +17,38 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
+.navbar {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
 }
 
-nav a {
+.main-title {
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #2c3e50;
+  color: black;
+  margin-right: 30px;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+.route {
+  text-decoration: none;
+  display: flex;
+  color: #000000;
+  font-size: 24px;
+  padding: 20px;
+  border: 0;
+  border-radius: 20px;
+}
+
+.route:hover {
+  background-color: #ccc;
+  transform: scale(1.05);
 }
 </style>
