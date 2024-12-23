@@ -1,4 +1,4 @@
-# Welcome to the Business API
+# Welcome to the Frontend Business API
 
 Welcome to the Frontend of Business API, where it allows you to manage departments and employees within an organization.
 
